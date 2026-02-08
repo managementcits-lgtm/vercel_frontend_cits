@@ -1,0 +1,58 @@
+.about-page .story {
+    display: flex;
+    gap: 80px;
+    padding: 100px 100px;
+    align-items: flex-start;
+    animation: fadeUp 0.9s ease forwards;
+}
+
+.about-page .st-l { flex: 1.2; }
+
+.about-page .tag {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background-color: #e6f0ff;
+    color: #0a73d9;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.about-page .st-l h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    color: #0f172a;
+    margin-bottom: 24px;
+}
+
+.about-page .st-l p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.about-page .st-r {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+
+.about-page .box {
+    background-color: #f8fafc;
+    border-radius: 18px;
+    padding: 36px 20px;
+    text-align: center;
+}
+
+.about-page .box h3 { font-size: 42px; margin-bottom: 6px; color: #000000; }
+.about-page .box h3 span { font-size: inherit; font-weight: inherit; color: inherit; }
+.about-page .box span { font-size: 14px; color: #64748b; }
+
+.about-page .b1 { background-color: #0a73d9; }
+.about-page .b1 h3, .about-page .b1 h3 span, .about-page .b1 span { color: white; }
+
+.about-page .b2 { background-color: #1fb6d5; }
+.about-page .b2 h3, .about-page .b2 h3 span, .about-page .b2 span { color: white; }

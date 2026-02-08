@@ -1,0 +1,404 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #f8fafc;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animate-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ================= HERO ================= */
+.sos-hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #a6ccf3, #e6e9ea);
+}
+
+.sos-hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 18px 8px 12px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.sos-badge-icon {
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sos-badge-icon i {
+  color: #0a73d9;
+}
+
+.sos-spancir {
+  color: #0a73d9;
+}
+
+.sos-hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: 26px 0 18px;
+}
+
+.sos-white-text { color: #000; }
+.sos-blue-text { color: #0165c8; margin-left: 4px; }
+
+.sos-hero p {
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* ================= BUTTONS ================= */
+.sos-btns {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.sos-btn-primary,
+.sos-btn-outline {
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  border: none;
+}
+
+.sos-btn-primary {
+  background: #335bfa;
+  color: #fff;
+}
+
+.sos-btn-primary:hover {
+  background: #fff;
+  color: #0e71f3;
+}
+
+.sos-btn-outline {
+  border: 2px solid #0029f7;
+  color: #1e00ff;
+}
+
+.sos-btn-outline:hover {
+  background: #fff;
+  color: #0a73d9;
+}
+
+.sos-arrow { font-size: 26px; }
+
+/* ================= FEATURES ================= */
+.sos-features {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px 10%;  
+  gap: 40px;
+  background-color: #f3feff;
+}
+
+.sos-feature-box {
+  max-width: 280px;
+  text-align: center;
+}
+
+.sos-icon-box {
+  width: 60px;
+  height: 60px;
+  background: #eef4ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.sos-icon-box i {
+  font-size: 28px;
+  color: #1d4ed8;
+}
+
+.sos-feature-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sos-feature-box p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ================= PIPELINE (FORM WRAPPER) ================= */
+
+.sos-pipeline {
+  padding: 70px 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e293b;
+  /* Light white lines for dark background */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+.sos-pipeline h1 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.sos-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 45px;
+}
+
+/* Form Container - Replacement for sos-card-grid */
+.sos-form-wrapper {
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid #a5a5a5;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.sos-custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sos-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.sos-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sos-input-group.sos-full-width {
+  grid-column: span 2;
+}
+
+.sos-input-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.sos-input-group input, 
+.sos-input-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.sos-input-group input:focus, 
+.sos-input-group textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.sos-submit-btn {
+  width: 100%;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+/* ================= CTA ================= */
+/* ================= CTA SECTION ================= */
+.sos-cta-section {
+  padding: 100px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7083a0; /* Page background color ki matching */
+}
+
+/* Designing as a highlighted card */
+.sos-cta-section {
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+  padding: 80px 40px;
+  border-radius: 30px;
+  border: 1px solid #dbeafe;
+  max-width: 1000px;
+  margin: 40px auto; /* Centering the card */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.sos-cta-section:hover {
+  transform: translateY(-5px); /* Chala subtle lift effect */
+}
+
+.sos-cta-section h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.sos-cta-section p {
+  font-size: 18px;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 35px;
+  line-height: 1.6;
+}
+
+/* Button Styling */
+.sos-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #335bfa;
+  color: #ffffff;
+  padding: 18px 40px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(51, 91, 250, 0.2);
+}
+
+.sos-cta-btn span {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.sos-cta-btn:hover {
+  background: #1e40af;
+  box-shadow: 0 15px 30px rgba(30, 64, 175, 0.3);
+}
+
+.sos-cta-btn:hover span {
+  transform: translateX(5px); /* Arrow slight ga move avthundi */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sos-cta-section {
+    padding: 60px 20px;
+    margin: 20px;
+  }
+  
+  .sos-cta-section h2 {
+    font-size: 32px;
+  }
+  
+  .sos-cta-section p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+    .sos-hero h1 { font-size: 46px; }
+    .sos-features { padding: 60px 5%; gap: 20px; }
+    .sos-cta-section { margin: 40px 20px; width: calc(100% - 40px); }
+}
+
+@media screen and (max-width: 768px) {
+    .sos-hero { padding: 40px 20px; min-height: auto; width: 100%; }
+    .sos-hero h1 { font-size: 34px; line-height: 1.3; }
+    .sos-btns { 
+        flex-direction: column;
+        width: 100%; 
+        gap: 15px; 
+    }
+    .sos-btn-primary, .sos-btn-outline { width: 100%; justify-content: center; }
+
+    .sos-features { 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 50px 20px;
+        width: 100%;
+    }
+    .sos-feature-box { max-width: 100%; margin-bottom: 30px; }
+
+    .sos-pipeline { padding: 50px 20px; width: 100%; }
+    .sos-form-wrapper { padding: 25px 20px; width: 100%; max-width: 100%; }
+    .sos-form-grid { 
+        grid-template-columns: 1fr;
+        gap: 15px; 
+    }
+    .sos-input-group.sos-full-width { grid-column: span 1; }
+
+    .sos-cta-section {
+        padding: 40px 20px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: calc(100% - 40px);
+    }
+    .sos-cta-section h2 { font-size: 28px; }
+    .sos-cta-section p { font-size: 16px; margin-bottom: 20px; }
+    .sos-cta-btn { width: 100%; justify-content: center; }
+}
+
+@media screen and (max-width: 480px) {
+    .sos-hero h1 { font-size: 28px; }
+    .sos-hero-badge { font-size: 12px; padding: 6px 12px; }
+    .sos-pipeline h1 { font-size: 26px; }
+    .sos-cta-section h2 { font-size: 24px; }
+    .sos-form-wrapper { padding: 20px 15px; }
+}

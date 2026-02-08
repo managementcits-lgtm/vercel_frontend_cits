@@ -1,0 +1,244 @@
+/* Prathi element ki common padding and margin reset */
+.services-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Section Styling */
+.services-page .svc {
+    padding: 80px 0;
+    background: #f6f8fb;
+        background: #02243e;
+    /* Layering multiple gradients to create randomness */
+    background-image: 
+        linear-gradient(115deg, transparent 70%, #ffea8b15 72%, transparent 74%),
+        linear-gradient(25deg, transparent 10%, #ffea8b10 12%, transparent 15%),
+        linear-gradient(165deg, transparent 40%, #ffea8b15 42%, transparent 45%);
+    background-size: 200px 200px, 150px 150px, 500px 500px; /* Light background for contrast */
+}
+
+/* Content ni center lo unchadaniki wrap class */
+.services-page .wrap {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Section Heading alignment */
+.services-page .head {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+/* "What We Offer" badge styling */
+.services-page .tag {
+    display: inline-block;
+    background: #eef3ff;
+    color: #1a73e8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.services-page .head h2 {
+    font-size: clamp(26px, 4vw, 42px);
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.services-page .head p {
+    font-size: clamp(15px, 3.5vw, 18px);
+    color: #b9bfca;
+    line-height: 1.6;
+}
+
+/* Grid Layout: Responsive columns */
+.services-page .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Service Card Styling */
+.services-page .card {
+    border: 1px solid rgba(16, 24, 40, .08);
+    border-radius: 16px;
+    padding: 30px;
+    min-height: 240px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(16, 24, 40, .03);
+    transition: all .3s ease;
+    display: flex;
+    flex-direction: column;
+    animation: fadeUp .6s ease both;
+}
+
+/* Card hover effect - card paiki lesthundi */
+.services-page .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(16, 24, 40, .12);
+    border-color: #1a73e8;
+}
+
+/* Icon box inside card */
+.services-page .ico {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: #eef4ff;
+    color: #1a73e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+    transition: .3s ease;
+}
+
+.services-page .card:hover .ico {
+    background: #1a73e8;
+    color: #fff;
+}
+
+.services-page .card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #101828;
+}
+
+.services-page .card p {
+    font-size: 14px;
+    color: #667085;
+    line-height: 1.6;
+}
+
+/* --- MODAL OVERLAY (Get Quotation Layout) --- */
+.services-page .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(16, 24, 40, 0.75); /* Dark transparent background */
+    backdrop-filter: blur(6px); /* Background ni blur chesthundi */
+    display: none; /* JS open chesinappudu flex అవుతుంది */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Modal Content Box */
+.services-page .modal-box {
+    background: #fff;
+    width: 100%;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+    animation: modalPop .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Close (X) button */
+.services-page .close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 32px;
+    color: #98a2b3;
+    line-height: 1;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.services-page .close:hover { color: #101828; }
+
+/* Modal Header icons */
+.services-page .ico.big {
+    width: 64px;
+    height: 64px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.services-page .m-head h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.services-page .m-text {
+    font-size: 16px;
+    color: #475467;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Features list in Modal (2 columns) */
+.services-page .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 35px;
+    list-style: none;
+}
+
+.services-page .features li {
+    font-size: 15px;
+    color: #344054;
+    display: flex;
+    align-items: center;
+}
+
+/* Blue dot for list items */
+.services-page .features li::before {
+    content: "●";
+    color: #1a73e8;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+/* Get Quote Button Styling */
+.services-page .btn {
+    display: block;
+    width: 100%;
+    background: #1a73e8;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.services-page .btn:hover {
+    background: #155ab5;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(26, 115, 232, 0.3);
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modalPop {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media(max-width: 576px) {
+    .services-page .modal-box { padding: 30px 20px; }
+    .services-page .features { grid-template-columns: 1fr; }
+    .services-page .head h2 { font-size: 28px; }
+}

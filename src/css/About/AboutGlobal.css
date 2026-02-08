@@ -1,0 +1,111 @@
+.about-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-page {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden; 
+    width: 100%;
+    line-height: 1.5;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+@media (max-width: 900px) {
+    section {
+        padding: 50px 15px !important;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-c {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .hero-c h1 {
+        font-size: 30px !important;
+        word-wrap: break-word;
+    }
+
+    .story {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    
+    .st-r {
+        grid-template-columns: 1fr 1fr !important;
+        width: 100% !important;
+        margin: 0 auto;
+    }
+
+    .vm-row {
+        flex-direction: column !important;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .cv-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .tl-wrap::before {
+        left: 20px !important;
+    }
+    .tl-item {
+        width: 100% !important;
+        padding-left: 50px !important;
+        padding-right: 5px !important;
+        text-align: left !important;
+    }
+    .tl-item::before {
+        left: 14px !important;
+    }
+    .left::before, .right::before {
+        left: 14px !important;
+        right: auto !important;
+    }
+    .right, .left {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    .tl-item .card {
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-c h1 {
+        font-size: 26px !important;
+    }
+
+    .st-l h2, .cv-head h2, .tl-head h2 {
+        font-size: 24px !important;
+    }
+
+    .st-r, .cv-row {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+    }
+
+    .box {
+        padding: 20px 10px;
+    }
+
+    .card, .cv-card {
+        padding: 20px !important;
+        width: 100%;
+    }
+}

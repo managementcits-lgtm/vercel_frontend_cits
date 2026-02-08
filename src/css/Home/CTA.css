@@ -1,0 +1,70 @@
+
+
+.cta {
+    padding: 140px 100px;
+    text-align: center;
+    color: white;
+    /* Kept as 'background' because it uses multiple background layers and gradients */
+    background: repeating-linear-gradient(
+                    -45deg,
+                    rgba(255,255,255,0.08),
+                    rgba(255,255,255,0.08) 10px,
+                    transparent 10px,
+                    transparent 20px
+                ),
+                linear-gradient(135deg,#0856a3,#20b1de);
+}
+
+.cta h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto 50px;
+    opacity: 0.95;
+}
+
+.cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.btn-pri,
+.btn-out {
+    padding: 16px 34px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.btn-pri {
+    background-color: white;
+    color: #0a73d9;
+}
+
+.btn-pri:hover {
+    transform: translateY(-2px);
+}
+
+.btn-out {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-out:hover {
+    background-color: white;
+    color: #0a73d9;
+}
+
+/* =====================================================
+   LARGE LAPTOPS & SMALL DESKTOPS

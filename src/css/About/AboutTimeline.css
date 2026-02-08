@@ -1,0 +1,37 @@
+.about-page .tl { 
+  padding: 120px 100px; 
+  background-color: #17770235; 
+  /* Grid lines logic */
+  background-image: 
+    linear-gradient(to right, #e0e0f0 1px, transparent 1px),
+    linear-gradient(to bottom, #e0e0f0 1px, transparent 1px);
+  background-size: 40px 40px; /* Lines madhya gap ni ikkada adjust chey */
+}
+.about-page .tl-head { text-align: center; max-width: 700px; margin: 0 auto 90px; }
+.about-page .tl-wrap { position: relative; }
+.about-page .he{
+    font-size: 50px;
+}
+
+.about-page .tl-wrap::before {
+    content: ""; position: absolute; top: 0; left: 50%;
+    width: 2px; height: 100%; background-color: #e2e8f0;
+    transform: translateX(-50%);
+}
+
+.about-page .tl-item { width: 50%; padding: 30px 40px; position: relative; }
+.about-page .tl-item::before {
+    content: ""; position: absolute; top: 45px; width: 12px; height: 12px;
+    background-color: #0a73d9; border-radius: 50%; z-index: 2;
+}
+
+.about-page .left { text-align: right; }
+.about-page .left::before { right: -6px; }
+.about-page .right { margin-left: auto; }
+.about-page .right::before { left: -6px; }
+
+.about-page .yr {
+    display: inline-block; background-color: #e6f0ff; color: #0a73d9;
+    font-size: 13px; font-weight: 600; padding: 6px 14px;
+    border-radius: 999px; margin-bottom: 14px;
+}

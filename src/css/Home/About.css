@@ -1,0 +1,123 @@
+.about-section {
+    background: #02243e;
+    /* Layering multiple gradients to create randomness */
+    background-image: 
+        linear-gradient(115deg, transparent 70%, #ffea8b15 72%, transparent 74%),
+        linear-gradient(25deg, transparent 10%, #ffea8b10 12%, transparent 15%),
+        linear-gradient(165deg, transparent 40%, #ffea8b15 42%, transparent 45%);
+    background-size: 400px 400px, 350px 350px, 500px 500px;
+    
+    border-top: 1px solid #eef2f7;
+    border-bottom: 1px solid #eceff3;
+    display: flex;
+    gap: 80px;
+    padding: 120px 100px;
+    align-items: center;
+}
+
+.about-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-card {
+    background: linear-gradient(135deg,#4494e4,#12b3e6);
+    width: 420px;
+    height: 360px;
+    border-radius: 28px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.logo-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgba(246, 37, 37, 0.784);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-card h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.about-card p {
+    opacity: 0.9;
+}
+
+.about-right {
+    flex: 1;
+}
+
+.pill {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background-color: #e6f0ff;
+    color: #366ca2;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about-right h1 {
+    font-size: 52px;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.desc {
+    font-size: 16px;
+    color: #dbe1e7;
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+.points {
+    list-style: none;
+    margin-bottom: 36px;
+}
+
+.points li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.points i {
+    color: #ecd105;
+    font-size: 18px;
+}
+
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0a73d9;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    background-color: #095fc0;
+}

@@ -1,0 +1,270 @@
+/* ================== GLOBAL & SMOOTH SCROLL ================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* RESET */
+.cps .cont-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ================== KEYFRAMES ================== */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ================== HERO ================== */
+.cps .cont-page .hero-contact {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M19 0h2v40h-2zM0 19h40v2H0z'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(135deg,#033f7b,#12b3e6);
+    background-repeat: repeat, no-repeat;
+    background-size: 40px 40px, cover;
+}
+
+.cps .cont-page .hero-con {
+    max-width: 900px;
+    padding: 0 20px;
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.cps .cont-page .hero-con h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.cps .cont-page .hero-con p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* ================== CONTACT SECTION ================== */
+.cps .cont-page .contact-section {
+    padding: 80px 20px;
+    background-color: #ecf6ff;
+    /* Ultra-thin professional grid */
+    background-image: 
+        linear-gradient(to right, rgba(0, 102, 255, 0.111) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 102, 255, 0.133) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.cps .cont-page .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cps .cont-page .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #091a34;
+}
+
+.cps .cont-page .section-subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 50px;
+}
+
+.cps .cont-page .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+/* LEFT - CONTACT INFO */
+.cps .cont-page .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.cps .cont-page .info-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: 0.3s ease;
+}
+
+.cps .cont-page .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
+}
+
+.cps .cont-page .info-card i {
+    font-size: 22px;
+    color: #2563eb;
+}
+
+.cps .cont-page .info-card h4 {
+    margin-bottom: 4px;
+    font-size: 17px;
+    color: #1e293b;
+}
+
+.cps .cont-page .info-card p {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* SUCCESS & ERROR MESSAGES */
+.cps .cont-page .form-success {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #e7f7ed;
+    color: #1e7e34;
+    border-left: 4px solid #28a745;
+    border-radius: 4px;
+}
+
+.cps .cont-page .form-error {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #fdecea;
+    color: #b02a37;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+}
+
+.cps .cont-page .error {
+    color: #e63946;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}
+
+/* ================== FORM STYLING ================== */
+.cps .cont-page .contact-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.cps .cont-page .contact-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cps .cont-page .contact-form input,
+.cps .cont-page .contact-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+.cps .cont-page .contact-form input:focus,
+.cps .cont-page .contact-form textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* BUTTON */
+.cps .cont-page .contact-form .btn {
+    background: #2563eb;
+    color: #fff;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.cps .cont-page .contact-form .btn:hover {
+    background: #0a52c1;
+    transform: translateY(-2px);
+}
+
+/* HEADQUARTERS CARD */
+.cps .cont-page .headquarters {
+    border: 2px solid #2563eb;
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cps .cont-page .direction-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.cps .cont-page .direction-btn:hover {
+    text-decoration: underline;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 1024px) {
+    .cps .cont-page .container { padding: 0 20px; }
+}
+
+@media (max-width: 900px) {
+    .cps .cont-page .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cps .cont-page .contact-form {
+        padding: 25px;
+    }
+
+    .cps .cont-page .hero-con h1 {
+        font-size: 32px;
+    }
+
+    .cps .cont-page .hero-con p {
+        font-size: 16px;
+    }
+}

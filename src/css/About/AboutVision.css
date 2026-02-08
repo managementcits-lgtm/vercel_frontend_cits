@@ -1,0 +1,46 @@
+.about-page .vm {
+    padding: 70px;
+
+    background:
+        /* Grid overlay */
+        linear-gradient(rgba(255, 224, 99, 0.17) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 230, 70, 0.158) 1px, transparent 1px),
+        /* Brown wave gradient */
+        linear-gradient(135deg, #5a2d0c, #dab789);
+
+    background-size: 40px 40px, 40px 40px, cover;
+}
+
+
+.about-page .vm-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.about-page .card {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.about-page .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.about-page .icon {
+    width: 56px; height: 56px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-page .i1 { background-color: #e6f0ff; color: #0a73d9; }
+.about-page .i2 { background-color: #e0f7fb; color: #1fb6d5; }
+
+.about-page .card h3 { font-size: 22px; margin-bottom: 14px; color: #0f172a; }
+.about-page .card p { font-size: 15px; line-height: 1.7; color: #64748b; }

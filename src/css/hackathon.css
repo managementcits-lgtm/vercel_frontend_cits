@@ -1,0 +1,515 @@
+/* ================== GLOBAL & SMOOTH SCROLL ================== */
+html { scroll-behavior: smooth; }
+
+/* ================== RESET ================== */
+.hackathon-page *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hackathon-page{
+  color:#0f172a;
+  background:#0b1220; /* dark tech base */
+  line-height:1.5;
+}
+
+/* remove underline for all links inside page */
+.hackathon-page a{
+  text-decoration:none !important;
+}
+.hackathon-page a:hover{
+  text-decoration:none !important;
+}
+
+/* ================== KEYFRAMES ================== */
+@keyframes fadeInDown {
+  from { opacity:0; transform:translateY(-24px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(28px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity:0; transform:scale(0.97); }
+  to   { opacity:1; transform:scale(1); }
+}
+
+/* ================== HERO ================== */
+.hackathon-page .hack-hero{
+  min-height:56vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  padding:52px 0 38px;
+  position:relative;
+  overflow:hidden;
+
+  background:
+    radial-gradient(circle at 15% 20%, rgba(99,102,241,0.35), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(34,211,238,0.22), transparent 45%),
+    radial-gradient(circle at 50% 120%, rgba(244,114,182,0.18), transparent 55%),
+    linear-gradient(135deg,#050a15,#0b1b3b 45%, #0a3a6a);
+}
+
+.hackathon-page .hack-box{
+  max-width:920px;
+  padding:0 18px;
+  animation:fadeInDown 0.8s ease-out both;
+}
+
+.hackathon-page .hack-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.14);
+  border:1px solid rgba(255,255,255,0.22);
+  font-weight:800;
+  color:#fff;
+  backdrop-filter:blur(6px);
+}
+
+.hackathon-page .hack-title{
+  font-size:clamp(2.1rem, 4vw, 3.35rem);
+  margin-top:14px;
+  font-weight:950;
+  line-height:1.12;
+}
+
+.hackathon-page .hack-title span{
+  color:#dbeafe;
+  text-decoration:none;
+}
+
+.hackathon-page .hack-text{
+  margin-top:10px;
+  font-size:16.5px;
+  line-height:1.65;
+  opacity:0.95;
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Pills */
+.hackathon-page .hack-info{
+  margin-top:18px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  animation:fadeInUp 0.8s ease-out 0.12s both;
+}
+
+.hackathon-page .hack-pill{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.16);
+  border:1px solid rgba(255,255,255,0.22);
+  font-weight:650;
+  white-space:nowrap;
+  backdrop-filter:blur(6px);
+}
+
+/* ✅ button group spacing */
+.hackathon-page .hack-hero .d-flex{
+  margin-top:18px !important;
+  gap:14px !important;
+}
+
+/* Buttons */
+.hackathon-page .hack-hero .btn{
+  border-radius:999px !important;
+  padding:11px 20px !important;
+  font-weight:800 !important;
+  transition:0.25s;
+  text-decoration:none !important;
+}
+.hackathon-page .hack-hero .btn-light{
+  background:#ffffff !important;
+  color:#0b1b3b !important;
+  border:none !important;
+}
+.hackathon-page .hack-hero .btn-outline-light{
+  background:rgba(255,255,255,0.10) !important;
+  border:1px solid rgba(255,255,255,0.50) !important;
+  color:#fff !important;
+}
+.hackathon-page .hack-hero .btn:hover{
+  transform:translateY(-2px);
+}
+
+/* ================== REGISTRATION ================== */
+.hackathon-page .reg-sec{
+  background:
+    radial-gradient(circle at 20% 0%, rgba(99,102,241,0.10), transparent 45%),
+    radial-gradient(circle at 80% 5%, rgba(34,211,238,0.10), transparent 45%),
+    linear-gradient(180deg, #f5f7ff 0%, #eef6ff 100%);
+  padding:56px 16px;
+}
+
+.hackathon-page .reg-title{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:8px;
+  color:#071225;
+  font-weight:950;
+}
+
+.hackathon-page .reg-sub{
+  text-align:center;
+  color:#64748b;
+  margin-bottom:26px;
+  font-size:15px;
+  font-weight:400;
+}
+
+/* Center form */
+.hackathon-page form{
+  max-width:980px;
+  margin:auto;
+}
+
+/* Cards */
+.hackathon-page .reg-card{
+  background:#ffffff;
+  padding:18px;
+  border-radius:12px;
+  border:1px solid rgba(15,23,42,0.10);
+  box-shadow:0 10px 26px rgba(2,6,23,0.06);
+  transition:0.25s;
+  margin-bottom:16px;
+  animation:fadeInUp 0.7s ease-out both;
+}
+
+.hackathon-page .reg-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 16px 34px rgba(37,99,235,0.14);
+}
+
+.hackathon-page .reg-card h5{
+  font-size:17px;
+  font-weight:900;
+  color:#0f172a;
+}
+
+.hackathon-page .reg-card i{ color:#2563eb; }
+
+.hackathon-page .form-label{
+  font-size:13px;
+  font-weight:500;
+  display:block;
+  margin-bottom:6px;
+  color:#0f172a;
+  opacity:0.95;
+}
+
+.hackathon-page .form-control,
+.hackathon-page .form-select{
+  width:100%;
+  height:44px;
+  padding:9px 12px;
+  border:1px solid rgba(15,23,42,0.18);
+  border-radius:10px;
+  font-size:14.5px;
+  font-weight:400;
+  outline:none;
+  transition:0.25s;
+  background:#ffffff;
+  color:#0f172a;
+}
+
+.hackathon-page .form-control::placeholder{
+  color:#94a3b8;
+  font-weight:400;
+}
+
+.hackathon-page .form-control:focus,
+.hackathon-page .form-select:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,0.12);
+}
+
+/* Member delete */
+.hackathon-page .mem-card{ position:relative; }
+
+.hackathon-page .mem-del{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  border:none;
+  background:#eef2ff;
+  color:#475569;
+  font-size:18px;
+  font-weight:800;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.25s;
+}
+.hackathon-page .mem-del:hover{
+  background:#fdecea;
+  color:#b02a37;
+  transform:scale(1.06);
+}
+
+/* Add member */
+.hackathon-page .add-mem{
+  border:2px dashed rgba(37,99,235,0.30);
+  border-radius:12px;
+  padding:14px;
+  background:rgba(37,99,235,0.08);
+  cursor:pointer;
+  transition:0.25s;
+  color:#1d4ed8;
+  font-weight:750;
+  max-width:980px;
+  margin:8px auto 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.hackathon-page .add-mem:hover{
+  border-color:#2563eb;
+  background:rgba(37,99,235,0.12);
+  transform:translateY(-2px);
+}
+
+.hackathon-page .add-plus{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#2563eb;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  font-weight:900;
+}
+
+/* Submit button */
+.hackathon-page .btn.btn-primary{
+  background:#2563eb !important;
+  color:#fff !important;
+  padding:12px 36px !important;
+  border:none !important;
+  border-radius:12px !important;
+  font-weight:800 !important;
+  transition:0.25s;
+  box-shadow:0 12px 26px rgba(37,99,235,0.20);
+}
+.hackathon-page .btn.btn-primary:hover{
+  background:#0a52c1 !important;
+  transform:translateY(-2px);
+}
+
+/* ================== STATS (ONE ROW) ================== */
+.hackathon-page .stats-sec{
+  padding:46px 16px;
+  background:linear-gradient(180deg, #0b1220 0%, #070c18 100%);
+}
+
+.hackathon-page .stats-sec .row{
+  display:flex !important;
+  flex-wrap:nowrap !important;
+  justify-content:space-between;
+  gap:14px;
+  margin:0;
+}
+
+.hackathon-page .stats-sec .row > .col-md-4{
+  flex:1 1 0 !important;
+  max-width:33.333% !important;
+  padding:0;
+}
+
+/* Base card (slightly brighter so all cards pop from footer) */
+.hackathon-page .stat-card{
+  background: rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:14px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.20);
+  padding:14px;
+  transition:0.25s;
+  animation:scaleIn 0.7s ease-out both;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-align:left;
+  height:100%;
+  color:#fff;
+  backdrop-filter:blur(8px);
+}
+
+/* ✅ FIX: Prize Pool color changed to NEON LIME (high contrast on dark) */
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(1) .stat-card{
+  border-color: rgba(163, 230, 53, 0.55);
+  background: linear-gradient(135deg, rgba(163,230,53,0.18), rgba(255,255,255,0.06));
+}
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(1) .stat-card i{
+  color:#a3e635;
+}
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(1) .stat-card h3{
+  color:#eaffb7;
+}
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(1) .stat-card:hover{
+  box-shadow:0 18px 46px rgba(163,230,53,0.22);
+  transform: translateY(-3px);
+}
+
+/* 2) Participants (Cyan) */
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(2) .stat-card{
+  border-color: rgba(34,211,238,0.32);
+  background: linear-gradient(135deg, rgba(34,211,238,0.14), rgba(255,255,255,0.06));
+}
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(2) .stat-card i{
+  color:#22d3ee;
+}
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(2) .stat-card:hover{
+  box-shadow:0 18px 42px rgba(34,211,238,0.16);
+  transform: translateY(-3px);
+}
+
+/* 3) 24 Hours (Violet) */
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(3) .stat-card{
+  border-color: rgba(139,92,246,0.32);
+  background: linear-gradient(135deg, rgba(139,92,246,0.14), rgba(255,255,255,0.06));
+}
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(3) .stat-card i{
+  color:#8b5cf6;
+}
+.hackathon-page .stats-sec .row > .col-md-4:nth-child(3) .stat-card:hover{
+  box-shadow:0 18px 42px rgba(139,92,246,0.16);
+  transform: translateY(-3px);
+}
+
+/* Icon/text sizes */
+.hackathon-page .stat-card i{
+  font-size:34px;
+  flex:0 0 auto;
+}
+
+.hackathon-page .stat-card h3{
+  margin:0;
+  font-size:22px;
+  font-weight:900;
+  color:#ffffff;
+  line-height:1.1;
+  white-space:nowrap;
+}
+
+.hackathon-page .stat-card p{
+  margin:4px 0 0;
+  color:rgba(255,255,255,0.82);
+  font-size:12.5px;
+  font-weight:600;
+  white-space:nowrap;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px){
+  .hackathon-page .hack-hero{ min-height:auto; padding:50px 0 36px; }
+  .hackathon-page .hack-title{ font-size:32px; }
+  .hackathon-page .hack-text{ font-size:16px; }
+
+  .hackathon-page .reg-sec{ padding:48px 14px; }
+  .hackathon-page .reg-title{ font-size:30px; }
+
+  .hackathon-page .stats-sec .row{ gap:10px; }
+  .hackathon-page .stat-card{ padding:12px; gap:10px; }
+  .hackathon-page .stat-card i{ font-size:28px; }
+  .hackathon-page .stat-card h3{ font-size:18px; }
+  .hackathon-page .stat-card p{ font-size:11.5px; }
+}
+
+@media (max-width: 480px){
+  .hackathon-page .hack-title{ font-size:28px; }
+  .hackathon-page .hack-pill{
+    width:100%;
+    justify-content:center;
+    white-space:normal;
+  }
+}
+
+/* =========================
+   RULES MODAL (POPUP)
+========================= */
+.rules-overlay {
+  position:fixed;
+  inset:0;
+  background:rgba(2,6,23,0.70);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  z-index:9999;
+}
+
+.rules-modal {
+  width:min(720px, 96vw);
+  background:#ffffff;
+  border-radius:16px;
+  box-shadow:0 24px 70px rgba(0,0,0,0.35);
+  overflow:hidden;
+  animation:fadeInUp 0.25s ease both;
+}
+
+.rules-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 16px;
+  border-bottom:1px solid #eef2f7;
+}
+
+.rules-title {
+  margin:0;
+  font-weight:900;
+  color:#0f172a;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.rules-close {
+  width:38px;
+  height:38px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+}
+.rules-close:hover { background:#f3f4f6; }
+
+.rules-list {
+  margin:0;
+  padding:14px 18px 6px 32px;
+  color:#334155;
+  font-weight:400;
+}
+.rules-list li { margin-bottom:10px; }
+
+.rules-actions {
+  padding:12px 16px 16px;
+  display:flex;
+  justify-content:flex-end;
+  border-top:1px solid #eef2f7;
+}
