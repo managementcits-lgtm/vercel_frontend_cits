@@ -1,7 +1,9 @@
 {
   "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
     {
-      "source": "/((?!assets|favicon.ico).*)",
+      "source": "/((?!assets|favicon.ico|sitemap.xml|robots.txt).*)",
       "destination": "/index.html"
     }
   ]
