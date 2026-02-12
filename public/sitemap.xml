@@ -15,40 +15,45 @@
     <loc>https://cits.org.in/contact/</loc>
     <priority>0.8</priority>
   </url>
-    <url>
-        <loc>https://cits.org.in/services/</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cits.org.in/pipeline/</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cits.org.in/cpus/</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cits.org.in/Hackathon/</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cits.org.in/mous/</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cits.org.in/gallery/</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cits.org.in/give</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cits.org.in/career/</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cits.org.in/contact/</loc>
-        <priority>0.8</priority>
-    </url>
+
+  <url>
+    <loc>https://cits.org.in/services/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cits.org.in/pipeline/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cits.org.in/cpus/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cits.org.in/hackathon/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cits.org.in/mous/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cits.org.in/gallery/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cits.org.in/give/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cits.org.in/career/</loc>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
